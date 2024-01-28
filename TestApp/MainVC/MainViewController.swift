@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     
     let tableView: UITableView = {
        let tableView = UITableView()
+        tableView.separatorStyle = .none
         return tableView
     }()
     
@@ -35,11 +36,10 @@ class MainViewController: UIViewController {
         setupTableView()
         viewModel.fetchCharacters()
         
-        viewModel.$characters
+        viewModel.$cellDataSource
             .sink { [weak self] _ in
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
-                    
                 }
             }
             .store(in: &cancellable)
@@ -71,7 +71,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     private func registerCell() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(MainConstraintCell.self, forCellReuseIdentifier: MainConstraintCell.identifier)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,9 +79,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "\(viewModel.characters[indexPath.row].name)"
-//        cell.textLabel?.text = "\(indexPath.row)"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MainConstraintCell.identifier, for: indexPath) as? MainConstraintCell else { return UITableViewCell() }
+        let cellViewModel = viewModel.cellDataSource[indexPath.row]
+        cell.setupCell(with: cellViewModel)
         return cell
     }
 }

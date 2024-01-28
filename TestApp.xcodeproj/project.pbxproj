@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF16F9042B66EDAF00BC053D /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF16F9032B66EDAF00BC053D /* UIImageView+Extensions.swift */; };
 		FF9749282B6537130068156C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9749272B6537130068156C /* AppDelegate.swift */; };
 		FF97492A2B6537130068156C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9749292B6537130068156C /* SceneDelegate.swift */; };
 		FF97492C2B6537130068156C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97492B2B6537130068156C /* MainViewController.swift */; };
@@ -18,9 +19,12 @@
 		FF97494A2B6555310068156C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9749492B6555310068156C /* NetworkError.swift */; };
 		FF97494C2B655CD50068156C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97494B2B655CD50068156C /* NetworkService.swift */; };
 		FF97494E2B655EE50068156C /* NetworkFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97494D2B655EE50068156C /* NetworkFacade.swift */; };
+		FF9749502B66CA110068156C /* MainConstraintCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF97494F2B66CA110068156C /* MainConstraintCell.swift */; };
+		FF9749522B66CEDF0068156C /* MainCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9749512B66CEDF0068156C /* MainCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF16F9032B66EDAF00BC053D /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		FF9749242B6537130068156C /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9749272B6537130068156C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF9749292B6537130068156C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +38,8 @@
 		FF9749492B6555310068156C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FF97494B2B655CD50068156C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FF97494D2B655EE50068156C /* NetworkFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFacade.swift; sourceTree = "<group>"; };
+		FF97494F2B66CA110068156C /* MainConstraintCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstraintCell.swift; sourceTree = "<group>"; };
+		FF9749512B66CEDF0068156C /* MainCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF16F9022B66ED8E00BC053D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FF16F9032B66EDAF00BC053D /* UIImageView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FF97491B2B6537130068156C = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +80,7 @@
 		FF9749262B6537130068156C /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				FF16F9022B66ED8E00BC053D /* Extensions */,
 				FF9749422B6549500068156C /* Models */,
 				FF97493C2B65393F0068156C /* DetailVC */,
 				FF97493B2B6539240068156C /* MainVC */,
@@ -84,6 +99,8 @@
 			children = (
 				FF97492B2B6537130068156C /* MainViewController.swift */,
 				FF97493D2B653DBF0068156C /* MainViewModel.swift */,
+				FF97494F2B66CA110068156C /* MainConstraintCell.swift */,
+				FF9749512B66CEDF0068156C /* MainCellViewModel.swift */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -186,10 +203,13 @@
 				FF97492C2B6537130068156C /* MainViewController.swift in Sources */,
 				FF97494A2B6555310068156C /* NetworkError.swift in Sources */,
 				FF9749282B6537130068156C /* AppDelegate.swift in Sources */,
+				FF9749522B66CEDF0068156C /* MainCellViewModel.swift in Sources */,
 				FF97492A2B6537130068156C /* SceneDelegate.swift in Sources */,
 				FF97494E2B655EE50068156C /* NetworkFacade.swift in Sources */,
+				FF16F9042B66EDAF00BC053D /* UIImageView+Extensions.swift in Sources */,
 				FF97494C2B655CD50068156C /* NetworkService.swift in Sources */,
 				FF9749442B6549630068156C /* Character.swift in Sources */,
+				FF9749502B66CA110068156C /* MainConstraintCell.swift in Sources */,
 				FF97493E2B653DBF0068156C /* MainViewModel.swift in Sources */,
 				FF9749462B6553A10068156C /* URLSession+Extensions.swift in Sources */,
 			);
